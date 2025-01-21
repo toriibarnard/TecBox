@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header class="header">
+    <header class="header fade-in">
         <div class="navbar">
             <div class="logo">
                 <img src="images/tecbox-logo.png" alt="TecBox International Logo">
@@ -24,7 +24,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <button class="cta-btn">Get a Quote</button>
+            <button class="cta-btn fade-in">Get a Quote</button>
         </div>
     </header>
 
@@ -33,124 +33,140 @@
         <div class="hero-content">
             <h1>Your Partner in Custom Shipping Crates</h1>
             <p>Reliable, Cost-Effective, and High-Quality Packaging Solutions Tailored to Your Needs</p>
-            <a href="#services" class="hero-cta-btn">See Our Services</a>
+            <a href="#services" class="hero-cta-btn fade-in">See Our Services</a>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section fade-in">
         <div class="about-content">
             <div class="about-text">
                 <h2>About TecBox International</h2>
                 <p>For over 20 years, TecBox has been designing and manufacturing custom shipping crates and boxes in all sizes for a variety of industries. Our solutions ensure safe, efficient, and cost-effective shipping for your business.</p>
             </div>
-            <div class="about-image">
+            <div class="about-image fade-in">
                 <img src="warehouse.jpg" alt="TecBox Warehouse">
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
-        <h2 class="section-title">Our Services</h2>
+    <section id="services" class="services-section fade-in">
+        <h2 class="section-title fade-in">Our Services</h2>
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card fade-in">
                 <i class="fas fa-box-open service-icon"></i>
                 <h3>Custom Crates</h3>
                 <p>Designs tailored to your specifications for safe and secure shipping.</p>
-                <a href="#contact" class="service-btn">Request a Quote</a>
+                <a href="#contact" class="service-btn fade-in">Request a Quote</a>
             </div>
-            <div class="service-card">
+            <div class="service-card fade-in">
                 <i class="fas fa-industry service-icon"></i>
                 <h3>In-House Production</h3>
                 <p>Manufactured in-house to ensure high-quality and timely delivery.</p>
-                <a href="#contact" class="service-btn">Request a Quote</a>
+                <a href="#contact" class="service-btn fade-in">Request a Quote</a>
             </div>
-            <div class="service-card">
+            <div class="service-card fade-in">
                 <i class="fas fa-shipping-fast service-icon"></i>
                 <h3>Shipping Solutions</h3>
                 <p>Reliable shipping options tailored to your urgent and standard needs.</p>
-                <a href="#contact" class="service-btn">Request a Quote</a>
+                <a href="#contact" class="service-btn fade-in">Request a Quote</a>
             </div>
         </div>
     </section>
 
-    <!-- Product Gallery Section -->
-<section id="product-gallery" class="product-gallery">
-    <h2 class="section-title">Our Products</h2>
-    <div class="filters">
-        <label for="product-type">Filter by type:</label>
-        <select id="product-type">
-            <option value="all">All</option>
-            <option value="crate">Crates</option>
-            <option value="box">Boxes</option>
-        </select>
-    </div>
-    <div class="product-grid">
-        <div class="product-card" data-type="crate">
-            <img src="crate1.jpg" alt="Custom Wooden Crate">
-            <h3>Custom Wooden Crate</h3>
-            <p>Durable and customized crates for safe shipping.</p>
+    <!-- Photo Gallery Section -->
+    <section id="photo-gallery" class="photo-gallery fade-in">
+        <h2 class="section-title fade-in">Our Gallery</h2>
+
+        <!-- Filter Buttons -->
+        <div class="gallery-filters fade-in">
+            <button class="filter-btn fade-in" data-filter="all">All</button>
+            <button class="filter-btn fade-in" data-filter="crate">Crates</button>
+            <button class="filter-btn fade-in" data-filter="box">Boxes</button>
+            <button class="filter-btn fade-in" data-filter="packaging">Packaging</button>
         </div>
-        <div class="product-card" data-type="box">
-            <img src="box1.jpg" alt="Heavy Duty Box">
-            <h3>Heavy Duty Box</h3>
-            <p>Strong and cost-effective packaging boxes.</p>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid fade-in">
+            <div class="gallery-item crate fade-in">
+                <img src="crate1.jpg" alt="Custom Crate">
+            </div>
+            <div class="gallery-item box fade-in">
+                <img src="box1.jpg" alt="Heavy Duty Box">
+            </div>
+            <div class="gallery-item packaging fade-in">
+                <img src="packaging1.jpg" alt="Custom Packaging">
+            </div>
+            <div class="gallery-item crate fade-in">
+                <img src="crate2.jpg" alt="Wooden Shipping Crate">
+            </div>
+            <div class="gallery-item box fade-in">
+                <img src="box2.jpg" alt="Sturdy Box Packaging">
+            </div>
+            <div class="gallery-item packaging fade-in">
+                <img src="packaging2.jpg" alt="Secure Packaging Box">
+            </div>
         </div>
-        <!-- More products here -->
-    </div>
-</section>
+
+        <!-- Lightbox Modal (hidden by default) -->
+        <div class="lightbox-modal" id="lightbox-modal">
+            <span class="close-btn" id="close-lightbox">&times;</span>
+            <img class="lightbox-content" id="lightbox-image" src="" alt="Enlarged Image">
+            <div id="caption"></div>
+        </div>
+    </section>
 
     <!-- Certifications Section -->
-<section id="certifications" class="certifications-section">
-    <h2 class="section-title">Certifications</h2>
-    <div class="certifications-grid">
-        <div class="certification-card">
-            <img src="certification-iso.png" alt="ISO 9001:2015 Certification">
-            <h3>ISO 9001:2015</h3>
-            <p>Certified Quality Management System for the highest standards in production and service.</p>
+    <section id="certifications" class="certifications-section fade-in">
+        <h2 class="section-title fade-in">Certifications</h2>
+        <div class="certifications-grid">
+            <div class="certification-card fade-in">
+                <img src="certification-iso.png" alt="ISO 9001:2015 Certification">
+                <h3>ISO 9001:2015</h3>
+                <p>Certified Quality Management System for the highest standards in production and service.</p>
+            </div>
+            <div class="certification-card fade-in">
+                <img src="certification-cfia.png" alt="CFIA Certification">
+                <h3>CFIA Certification</h3>
+                <p>Ensuring compliance with Canadian Food Inspection Agency for safe packaging solutions.</p>
+            </div>
+            <div class="certification-card fade-in">
+                <img src="certification-cwpca.png" alt="CWPC Certification">
+                <h3>CWPC Certification</h3>
+                <p>Compliant with Canadian Wood Packaging Certification Program (CWPC) regulations.</p>
+            </div>
+            <div class="certification-card fade-in">
+                <img src="certification-ispminternational.png" alt="ISPM-15 Certification">
+                <h3>ISPM-15 Certification</h3>
+                <p>Compliant with International Standards for Phytosanitary Measures (ISPM-15).</p>
+            </div>
         </div>
-        <div class="certification-card">
-            <img src="certification-cfia.png" alt="CFIA Certification">
-            <h3>CFIA Certification</h3>
-            <p>Ensuring compliance with Canadian Food Inspection Agency for safe packaging solutions.</p>
-        </div>
-        <div class="certification-card">
-            <img src="certification-cwpca.png" alt="CWPC Certification">
-            <h3>CWPC Certification</h3>
-            <p>Compliant with Canadian Wood Packaging Certification Program (CWPC) regulations.</p>
-        </div>
-        <div class="certification-card">
-            <img src="certification-ispminternational.png" alt="ISPM-15 Certification">
-            <h3>ISPM-15 Certification</h3>
-            <p>Compliant with International Standards for Phytosanitary Measures (ISPM-15).</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Contact Us</h2>
+    <section id="contact" class="contact-section fade-in">
+        <h2 class="section-title fade-in">Contact Us</h2>
         <div class="contact-content">
-            <div class="contact-info">
+            <div class="contact-info fade-in">
                 <h3>TecBox International</h3>
                 <p>Address: 12681 HWY 3, Rhodes Corner, Nova Scotia, B4V 5N2, Canada</p>
                 <p>Phone: +1 902 543 5044</p>
                 <p>Email: <a href="mailto:info@tecbox.ca">info@tecbox.ca</a></p>
             </div>
-            <div class="contact-form">
+            <div class="contact-form fade-in">
                 <form action="#" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="cta-btn">Send Message</button>
+                    <button type="submit" class="cta-btn fade-in">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer">
+    <footer class="footer fade-in">
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="logo.png" alt="TecBox Logo">

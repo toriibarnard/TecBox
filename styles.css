@@ -421,3 +421,37 @@ body {
         flex-direction: column;
     }
 }
+
+.product-gallery {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.filters {
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}

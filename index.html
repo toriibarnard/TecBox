@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TecBox International</title>
+    <title>TecBox International LTD</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For FontAwesome Icons -->
@@ -74,6 +74,32 @@
             </div>
         </div>
     </section>
+
+    <!-- Product Gallery Section -->
+<section id="product-gallery" class="product-gallery">
+    <h2 class="section-title">Our Products</h2>
+    <div class="filters">
+        <label for="product-type">Filter by type:</label>
+        <select id="product-type">
+            <option value="all">All</option>
+            <option value="crate">Crates</option>
+            <option value="box">Boxes</option>
+        </select>
+    </div>
+    <div class="product-grid">
+        <div class="product-card" data-type="crate">
+            <img src="crate1.jpg" alt="Custom Wooden Crate">
+            <h3>Custom Wooden Crate</h3>
+            <p>Durable and customized crates for safe shipping.</p>
+        </div>
+        <div class="product-card" data-type="box">
+            <img src="box1.jpg" alt="Heavy Duty Box">
+            <h3>Heavy Duty Box</h3>
+            <p>Strong and cost-effective packaging boxes.</p>
+        </div>
+        <!-- More products here -->
+    </div>
+</section>
 
     <!-- Certifications Section -->
 <section id="certifications" class="certifications-section">

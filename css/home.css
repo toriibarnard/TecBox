@@ -1,0 +1,26 @@
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+header h1 {
+    color: #004080;
+    font-size: 36px;
+}
+
+section#about {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+section#about h2 {
+    color: #004080;
+    font-size: 28px;
+}
+
+section#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}

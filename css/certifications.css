@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+    color: #004080;
+}
+
+ul {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    list-style-type: square;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

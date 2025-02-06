@@ -3,190 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TecBox International LTD</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For FontAwesome Icons -->
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header fade-in">
-        <div class="navbar">
-            <div class="logo">
-                <img src="images/tecbox-logo.png" alt="TecBox International Logo">
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="cta-btn fade-in">Get a Quote</button>
-        </div>
+    <header>
+        <h1>TecBox International LTD</h1>
+        <p>Innovative solutions for your shipping and packaging requirements.</p>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Your Partner in Custom Shipping Crates</h1>
-            <p>Reliable, Cost-Effective, and High-Quality Packaging Solutions Tailored to Your Needs</p>
-            <a href="#services" class="hero-cta-btn fade-in">See Our Services</a>
-        </div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>For over 28 years, we have been designing and manufacturing customized shipping crates and boxes in all sizes and forms for the manufacturing industry. Our emphasis is on making sure your product arrives at its destination in the same pristine condition in which it departed.</p>
+        <p>With our strong service approach, guaranteed on-time delivery, and focus on total customer satisfaction, we provide you with innovative products at an affordable price.</p>
+        <p>TecBox is equally committed to excellence in all aspects of our organization. Our company is <strong>ISO 9001 certified</strong>—a measure of our dedication to quality.</p>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about-section fade-in">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About TecBox International</h2>
-                <p>For over 20 years, TecBox has been designing and manufacturing custom shipping crates and boxes in all sizes for a variety of industries. Our solutions ensure safe, efficient, and cost-effective shipping for your business.</p>
-            </div>
-            <div class="about-image fade-in">
-                <img src="warehouse.jpg" alt="TecBox Warehouse">
-            </div>
-        </div>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li><strong>ISO9001</strong> - Quality Management System Certification</li>
+            <li><strong>ISPM#15</strong> - Compliance for international trade and shipping</li>
+            <li><strong>CFIA/CWPCA</strong> - Canadian Wood Pallet & Container Association inspected</li>
+            <li><strong>Heat Treating</strong> - Ensuring wood is pest and disease-free</li>
+            <li><strong>Canadian Wood Packaging Certification Program (CWPCP)</strong></li>
+        </ul>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section fade-in">
-        <h2 class="section-title fade-in">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card fade-in">
-                <i class="fas fa-box-open service-icon"></i>
-                <h3>Custom Crates</h3>
-                <p>Designs tailored to your specifications for safe and secure shipping.</p>
-                <a href="#contact" class="service-btn fade-in">Request a Quote</a>
-            </div>
-            <div class="service-card fade-in">
-                <i class="fas fa-industry service-icon"></i>
-                <h3>In-House Production</h3>
-                <p>Manufactured in-house to ensure high-quality and timely delivery.</p>
-                <a href="#contact" class="service-btn fade-in">Request a Quote</a>
-            </div>
-            <div class="service-card fade-in">
-                <i class="fas fa-shipping-fast service-icon"></i>
-                <h3>Shipping Solutions</h3>
-                <p>Reliable shipping options tailored to your urgent and standard needs.</p>
-                <a href="#contact" class="service-btn fade-in">Request a Quote</a>
-            </div>
-        </div>
+    <section id="design">
+        <h2>Custom Crate Design</h2>
+        <p>Tell us the exact size of the item you'd like to ship, and we'll design a crate around it. We also ensure appropriate weight support and protective lining to keep fragile items safe.</p>
     </section>
 
-    <!-- Photo Gallery Section -->
-    <section id="photo-gallery" class="photo-gallery fade-in">
-        <h2 class="section-title fade-in">Our Gallery</h2>
-
-        <!-- Filter Buttons -->
-        <div class="gallery-filters fade-in">
-            <button class="filter-btn fade-in" data-filter="all">All</button>
-            <button class="filter-btn fade-in" data-filter="crate">Crates</button>
-            <button class="filter-btn fade-in" data-filter="box">Boxes</button>
-            <button class="filter-btn fade-in" data-filter="packaging">Packaging</button>
-        </div>
-
-        <!-- Gallery Grid -->
-        <div class="gallery-grid fade-in">
-            <div class="gallery-item crate fade-in">
-                <img src="crate1.jpg" alt="Custom Crate">
-            </div>
-            <div class="gallery-item box fade-in">
-                <img src="box1.jpg" alt="Heavy Duty Box">
-            </div>
-            <div class="gallery-item packaging fade-in">
-                <img src="packaging1.jpg" alt="Custom Packaging">
-            </div>
-            <div class="gallery-item crate fade-in">
-                <img src="crate2.jpg" alt="Wooden Shipping Crate">
-            </div>
-            <div class="gallery-item box fade-in">
-                <img src="box2.jpg" alt="Sturdy Box Packaging">
-            </div>
-            <div class="gallery-item packaging fade-in">
-                <img src="packaging2.jpg" alt="Secure Packaging Box">
-            </div>
-        </div>
-
-        <!-- Lightbox Modal (hidden by default) -->
-        <div class="lightbox-modal" id="lightbox-modal">
-            <span class="close-btn" id="close-lightbox">&times;</span>
-            <img class="lightbox-content" id="lightbox-image" src="" alt="Enlarged Image">
-            <div id="caption"></div>
-        </div>
+    <section id="production">
+        <h2>Our Production</h2>
+        <p>All our crates and boxes are manufactured in-house in Nova Scotia, using sustainable materials sourced locally. We ensure quality by using the strongest materials such as plywood, OSB, double-wall cardboard, and heat-treated lumber.</p>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section fade-in">
-        <h2 class="section-title fade-in">Certifications</h2>
-        <div class="certifications-grid">
-            <div class="certification-card fade-in">
-                <img src="certification-iso.png" alt="ISO 9001:2015 Certification">
-                <h3>ISO 9001:2015</h3>
-                <p>Certified Quality Management System for the highest standards in production and service.</p>
-            </div>
-            <div class="certification-card fade-in">
-                <img src="certification-cfia.png" alt="CFIA Certification">
-                <h3>CFIA Certification</h3>
-                <p>Ensuring compliance with Canadian Food Inspection Agency for safe packaging solutions.</p>
-            </div>
-            <div class="certification-card fade-in">
-                <img src="certification-cwpca.png" alt="CWPC Certification">
-                <h3>CWPC Certification</h3>
-                <p>Compliant with Canadian Wood Packaging Certification Program (CWPC) regulations.</p>
-            </div>
-            <div class="certification-card fade-in">
-                <img src="certification-ispminternational.png" alt="ISPM-15 Certification">
-                <h3>ISPM-15 Certification</h3>
-                <p>Compliant with International Standards for Phytosanitary Measures (ISPM-15).</p>
-            </div>
-        </div>
+    <section id="shipping">
+        <h2>Shipping & Stocking Services</h2>
+        <p>For customers with ongoing demand, we offer stocking services for immediate shipping. We are certified under multiple international standards to guarantee quality and compliance.</p>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact-section fade-in">
-        <h2 class="section-title fade-in">Contact Us</h2>
-        <div class="contact-content">
-            <div class="contact-info fade-in">
-                <h3>TecBox International</h3>
-                <p>Address: 12681 HWY 3, Rhodes Corner, Nova Scotia, B4V 5N2, Canada</p>
-                <p>Phone: +1 902 543 5044</p>
-                <p>Email: <a href="mailto:info@tecbox.ca">info@tecbox.ca</a></p>
-            </div>
-            <div class="contact-form fade-in">
-                <form action="#" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="cta-btn fade-in">Send Message</button>
-                </form>
-            </div>
-        </div>
+    <section id="special-services">
+        <h2>Special Services</h2>
+        <p>We produce a variety of shop aids for the manufacturing industry, including specialized transport cases and aerospace jigs made with CNC routing.</p>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer fade-in">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="logo.png" alt="TecBox Logo">
-            </div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
+    <section id="cardboard">
+        <h2>Cardboard Crating System</h2>
+        <p>Our patented cardboard crating system offers a cost-effective, crush-proof solution that is used in the aerospace industry and is approved by the U.S. Department of Defense.</p>
+    </section>
+
+    <section id="awards">
+        <h2>Awards & Recognition</h2>
+        <ul>
+            <li><strong>2012 Nova Scotia Export Achievement Award</strong></li>
+            <li><strong>Lunenburg-Queens Business Excellence Award</strong></li>
+        </ul>
+        <p>We are proud to be recognized for our commitment to quality, sustainability, and customer service.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TecBox International LTD. All rights reserved.</p>
     </footer>
-
-    <!-- Optional Scripts -->
-    <script src="script.js"></script>
 </body>
 </html>

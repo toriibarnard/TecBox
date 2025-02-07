@@ -13,7 +13,7 @@ nav {
     background-color: #fff; /* White background */
     padding: 1rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 1000; /* Ensure navbar stays on top */
 }
@@ -76,6 +76,56 @@ nav {
 
 .nav-links li a:hover::after {
     width: 100%; /* Animated underline on hover */
+}
+
+/* Sticky Bubble Button */
+.sticky-contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px; /* Make it round */
+    height: 60px; /* Make it round */
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgb(6, 132, 120); /* Theme color */
+    border: none;
+    border-radius: 50%; /* Fully round */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above other content */
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+}
+
+.sticky-contact-button:hover {
+    background-color: rgb(4, 100, 90); /* Darker shade for hover */
+    animation: none; /* Stop floating on hover */
+    transform: scale(1.1); /* Slight grow on hover */
+}
+
+.sticky-contact-button.hidden {
+    opacity: 0; /* Hide the button */
+    pointer-events: none; /* Disable clicks when hidden */
+}
+
+/* Envelope icon inside the bubble */
+.sticky-contact-button i {
+    font-size: 1.5rem;
 }
 
 /* Responsive Design */

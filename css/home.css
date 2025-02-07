@@ -40,17 +40,17 @@ header p {
 /* About Section Styles */
 #about {
     padding: 80px 20px;
-    background-color: #fff; /* White background for contrast */
+    background-color: #fff;
     text-align: center;
-    border-radius: 10px; /* Soft rounded corners */
-    margin: 40px auto; /* Add some spacing */
-    max-width: 1200px; /* Limit width for better readability */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #about h2 {
     font-size: 2.8rem;
-    color: rgb(6, 132, 120); /* Theme color */
+    color: rgb(6, 132, 120);
     margin-bottom: 30px;
     position: relative;
 }
@@ -60,20 +60,104 @@ header p {
     display: block;
     width: 60px;
     height: 4px;
-    background: rgb(6, 132, 120); /* Theme color */
+    background: rgb(6, 132, 120);
     margin: 10px auto 0;
 }
 
-#about p {
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    line-height: 1.8;
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-#about strong {
-    color: rgb(6, 132, 120); /* Theme color */
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: rgb(6, 132, 120);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: rgb(6, 132, 120);
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-features {
+        flex-direction: column;
+    }
+
+    .feature {
+        margin-bottom: 20px;
+    }
 }
 
 /* Call-to-Action Button */

@@ -6,7 +6,7 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: 80px; /* Add margin to account for the sticky navbar */
+    margin-top: 80px;
 }
 
 header::before {

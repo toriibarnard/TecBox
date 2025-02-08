@@ -1,17 +1,40 @@
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, rgba(6, 132, 120, 0.9), rgba(4, 100, 90, 0.9)), url('images/certifications-bg.jpg') no-repeat center center/cover;
+    background: url('../images/Shop.jpg') no-repeat center center/cover;
     color: #fff;
     padding: 150px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin-top: 80px;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(6, 132, 120, 0.7); /* Theme color overlay */
+    z-index: 1;
 }
 
 header h1 {
     font-size: 4rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
     animation: fadeInDown 1.5s ease-in-out;
+}
+
+header p {
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 @keyframes fadeInDown {
@@ -26,13 +49,13 @@ header h1 {
 }
 
 /* Certifications List Styles */
-section {
+.certifications-list {
     padding: 80px 20px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-section ul {
+.certifications-list ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -41,98 +64,125 @@ section ul {
     gap: 30px;
 }
 
-section ul li {
+.certifications-list ul li {
     background: #fff;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-section ul li::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(6, 132, 120, 0.1), rgba(4, 100, 90, 0.1));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-section ul li:hover {
+.certifications-list ul li:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-section ul li:hover::before {
-    opacity: 1;
+.certification-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-section ul li strong {
+.certifications-list ul li strong {
     font-size: 1.5rem;
     color: rgb(6, 132, 120);
     margin-bottom: 10px;
-    display: block;
 }
 
-section ul li p {
+.certifications-list ul li p {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
     margin: 0;
 }
 
-section ul li::after {
-    content: '✔';
-    font-size: 2rem;
+/* Why Certifications Section */
+.why-certifications {
+    padding: 60px 20px;
+    background: rgba(6, 132, 120, 0.05);
+    text-align: center;
+}
+
+.why-certifications h2 {
+    font-size: 2.5rem;
     color: rgb(6, 132, 120);
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    margin-bottom: 20px;
 }
 
-section ul li:hover::after {
-    opacity: 1;
+.why-certifications p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
-/* Certification Icons */
-section ul li::before {
-    content: '';
-    width: 60px;
-    height: 60px;
+/* CTA Section */
+.cta {
+    padding: 60px 20px;
+    text-align: center;
     background: rgb(6, 132, 120);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #fff;
-    font-size: 1.5rem;
-    flex-shrink: 0;
 }
 
-section ul li:nth-child(1)::before {
-    content: '🏅'; /* Trophy icon for ISO9001 */
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-section ul li:nth-child(2)::before {
-    content: '🌍'; /* Globe icon for ISPM#15 */
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
-section ul li:nth-child(3)::before {
-    content: '🔥'; /* Fire icon for CFIA/CWPCA */
+.cta-button {
+    background: #fff;
+    color: rgb(6, 132, 120);
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-section ul li:nth-child(4)::before {
-    content: '🪵'; /* Wood icon for CWPCP */
+.cta-button:hover {
+    background: rgb(4, 100, 90);
+    color: #fff;
+}
+
+/* Downloads Section */
+.downloads {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.downloads h2 {
+    font-size: 2.5rem;
+    color: rgb(6, 132, 120);
+    margin-bottom: 20px;
+}
+
+.downloads p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.download-button {
+    background: rgb(6, 132, 120);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.download-button:hover {
+    background: rgb(4, 100, 90);
 }
 
 /* Responsive Design */
@@ -141,16 +191,7 @@ section ul li:nth-child(4)::before {
         font-size: 2.5rem;
     }
 
-    section ul {
+    .certifications-list ul {
         grid-template-columns: 1fr;
-    }
-
-    section ul li {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    section ul li::before {
-        margin-bottom: 20px;
     }
 }

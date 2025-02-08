@@ -116,7 +116,7 @@ header p {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content to the top */
-    max-height: 100%; /* Match the height of the image */
+    max-height: 378px; /* Match the height of the image */
     overflow-y: auto; /* Add scrollbar if content overflows */
 }
 
@@ -187,22 +187,24 @@ header p {
     flex: 1;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Initial shadow */
     height: 100%; /* Ensure the image container takes full height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    background: transparent; /* Ensure no background color */
+}
+
+.about-image:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .about-image img {
     width: 100%;
     height: 100%; /* Ensure the image takes full height */
     object-fit: cover; /* Maintain aspect ratio while covering the container */
-    border-radius: 10px;
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.about-image:hover img {
-    transform: scale(1.1); /* Zoom effect on hover */
-    filter: brightness(1.1); /* Brighten image on hover */
+    border-radius: 10px; /* Rounded corners for the image */
+    display: block; /* Remove any default inline spacing */
 }
 
 .about-features {

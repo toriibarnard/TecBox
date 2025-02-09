@@ -1,40 +1,17 @@
 /* Header Styles */
 header {
-    background: url('../images/Shop.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(6, 132, 120, 0.9), rgba(4, 100, 90, 0.9)), url('../images/Shop.jpg') no-repeat center center/cover;
     color: #fff;
     padding: 150px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: 80px;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(6, 132, 120, 0.7); /* Theme color overlay */
-    z-index: 1;
 }
 
 header h1 {
     font-size: 4rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
+    margin-bottom: 10px;
     animation: fadeInDown 1.5s ease-in-out;
-}
-
-header p {
-    font-size: 1.8rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1.5s ease-in-out;
 }
 
 @keyframes fadeInDown {
@@ -81,8 +58,10 @@ header p {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.certification-icon {
-    font-size: 3rem;
+.certification-photo {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
@@ -104,6 +83,7 @@ header p {
     padding: 60px 20px;
     background: rgba(6, 132, 120, 0.05);
     text-align: center;
+    position: relative;
 }
 
 .why-certifications h2 {
@@ -116,8 +96,16 @@ header p {
     font-size: 1.1rem;
     color: #555;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     line-height: 1.8;
+}
+
+.scattered-photo {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* CTA Section */
@@ -126,6 +114,7 @@ header p {
     text-align: center;
     background: rgb(6, 132, 120);
     color: #fff;
+    position: relative;
 }
 
 .cta h2 {
@@ -157,6 +146,7 @@ header p {
 .downloads {
     padding: 60px 20px;
     text-align: center;
+    position: relative;
 }
 
 .downloads h2 {
@@ -193,5 +183,9 @@ header p {
 
     .certifications-list ul {
         grid-template-columns: 1fr;
+    }
+
+    .scattered-photo {
+        max-width: 100%;
     }
 }

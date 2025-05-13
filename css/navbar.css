@@ -1,6 +1,6 @@
-/* General Styles */
+/* Enhanced Navbar Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -8,14 +8,24 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar Styles */
+/* Navbar Styles inspired by Gatefoot Forge */
 nav {
-    background-color: #fff; /* White background */
-    padding: 1rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    /* position: sticky; */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure navbar stays on top */
+    z-index: 1000;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(6, 132, 120, 0.1);
+}
+
+/* Shrink navbar on scroll */
+nav.scrolled {
+    padding: 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.98);
 }
 
 .navbar-container {
@@ -28,12 +38,13 @@ nav {
 }
 
 .logo img {
-    height: 60px; /* Slightly larger logo for prominence */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    height: 65px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .logo img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 .nav-links {
@@ -45,61 +56,138 @@ nav {
 }
 
 .nav-links li {
-    margin: 0 20px; /* Increased spacing between links */
+    margin: 0 25px;
+    position: relative;
 }
 
 .nav-links li a {
-    color: #333; /* Dark text for contrast */
+    color: #333;
     text-decoration: none;
-    font-weight: 600; /* Semi-bold for better readability */
+    font-weight: 600;
     font-size: 1.1rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
     position: relative;
+}
+
+.nav-links li a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    color: rgb(6, 132, 120);
+    transition: transform 0.3s ease;
 }
 
 .nav-links li a::after {
     content: '';
     display: block;
     width: 0;
-    height: 2px;
-    background: rgb(6, 132, 120); /* Theme color for underline */
+    height: 3px;
+    background: rgb(6, 132, 120);
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     transition: width 0.3s ease;
+    border-radius: 3px;
 }
 
 .nav-links li a:hover {
-    color: rgb(6, 132, 120); /* Theme color on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    color: rgb(6, 132, 120);
+}
+
+.nav-links li a:hover i {
+    transform: translateY(-2px);
 }
 
 .nav-links li a:hover::after {
-    width: 100%; /* Animated underline on hover */
+    width: 100%;
+}600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
 }
 
-/* Sticky Bubble Button */
+.nav-links li a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    color: rgb(6, 132, 120);
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(6, 132, 120);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+.nav-links li a:hover {
+    color: rgb(6, 132, 120);
+}
+
+.nav-links li a:hover i {
+    transform: translateY(-2px);
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Active link style */
+.nav-links li a.active {
+    color: rgb(6, 132, 120);
+}
+
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+/* Mobile nav toggle button */
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-toggle:hover {
+    color: rgb(6, 132, 120);
+}
+
+/* Sticky Bubble Button with enhanced styling */
 .sticky-contact-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 100px; /* Make it round */
-    height: 60px; /* Make it round */
-    padding: 0;
+    bottom: 30px;
+    right: 30px;
+    width: auto;
+    height: auto;
+    padding: 12px 20px;
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
-    background-color: rgb(6, 132, 120); /* Theme color */
+    background-color: rgb(6, 132, 120);
     border: none;
-    border-radius: 50%; /* Fully round */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* Ensure it's above other content */
-    animation: float 3s ease-in-out infinite; /* Floating animation */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease;
 }
 
 /* Floating animation */
@@ -108,44 +196,77 @@ nav {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Move up slightly */
+        transform: translateY(-7px);
     }
 }
 
 .sticky-contact-button:hover {
-    background-color: rgb(4, 100, 90); /* Darker shade for hover */
-    animation: none; /* Stop floating on hover */
-    transform: scale(1.1); /* Slight grow on hover */
+    background-color: rgb(4, 100, 90);
+    animation: none;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .sticky-contact-button.hidden {
-    opacity: 0; /* Hide the button */
-    pointer-events: none; /* Disable clicks when hidden */
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
 }
 
 /* Envelope icon inside the bubble */
 .sticky-contact-button i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-right: 8px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
     .navbar-container {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
     }
 
     .nav-links {
         flex-direction: column;
         width: 100%;
-        margin-top: 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        max-height: 500px;
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .nav-links li a {
-        font-size: 1rem;
+        padding: 15px 20px;
+        justify-content: center;
+    }
+
+    .nav-links li a::after {
+        display: none;
+    }
+
+    .sticky-contact-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
     }
 }

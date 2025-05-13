@@ -1,0 +1,30 @@
+/* Custom Font Definitions */
+@font-face {
+    font-family: 'Penna';
+    src: url('../fonts/penna.woff2') format('woff2'),
+         url('../fonts/penna.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Simplifica';
+    src: url('../fonts/simplifica.woff2') format('woff2'),
+         url('../fonts/simplifica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Classes */
+.penna-font {
+    font-family: 'Penna', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.simplifica-font {
+    font-family: 'Simplifica', sans-serif;
+    letter-spacing: 1px;
+}

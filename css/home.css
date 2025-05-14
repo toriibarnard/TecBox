@@ -1,6 +1,5 @@
-/* Enhanced Header Styles */
+/* Enhanced Header Styles with Slideshow */
 header {
-    background: url('../images/Shop.jpg') no-repeat center center/cover;
     color: #fff;
     padding: 180px 20px; /* Increased padding for more impact */
     text-align: center;
@@ -10,6 +9,33 @@ header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
 }
 
+/* Slideshow background - default first image */
+.header-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.header-slideshow div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.header-slideshow div.active {
+    opacity: 1;
+}
+
 header::before {
     content: '';
     position: absolute;
@@ -17,7 +43,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(6, 132, 120, 0.8), rgba(4, 70, 80, 0.9)); /* Gradient overlay */
+    background: rgba(0, 0, 0, 0.5); /* Dark tint overlay instead of green */
     z-index: 1;
 }
 
@@ -247,24 +273,6 @@ header::after {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.feature::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(6, 132, 120, 0.15); /* Transparent green */
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 0.3s ease;
-    border-radius: 15px;
-}
-
-.feature:hover::after {
-    opacity: 1;
-}
-
 .feature i {
     font-size: 3rem; /* Larger icons */
     color: rgb(6, 132, 120);
@@ -323,6 +331,152 @@ header::after {
 
 .cta-button:hover i {
     transform: translateX(4px);
+}
+
+/* Add a light background pattern */
+body {
+    background-image: 
+        linear-gradient(rgba(249, 249, 249, 0.97), rgba(249, 249, 249, 0.97)),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2306847c' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
+
+/* Enhanced Footer Styles */
+footer {
+    margin-top: 60px;
+    padding: 0;
+    background: url('../images/Shop.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+.footer-map, .footer-contact {
+    flex: 1;
+    padding: 40px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.footer-map {
+    border-radius: 20px 0 0 20px;
+    margin: 40px 0 40px 40px;
+    overflow: hidden;
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.footer-map iframe {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(6, 132, 120, 0.2);
+}
+
+.footer-contact {
+    border-radius: 0 20px 20px 0;
+    margin: 40px 40px 40px 0;
+    justify-content: center;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(6, 132, 120, 0.2);
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-contact h4 {
+    font-style: italic;
+    color: rgb(6, 132, 120);
+    font-weight: 500;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.footer-contact p {
+    margin: 12px 0;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact p i {
+    color: rgb(6, 132, 120);
+    margin-right: 10px;
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.footer-contact a {
+    color: rgb(6, 132, 120);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-contact a:hover {
+    color: rgb(4, 100, 90);
+    transform: translateX(3px);
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-map, .footer-contact {
+        width: calc(100% - 40px);
+        margin: 20px;
+        border-radius: 20px;
+        height: auto;
+    }
+    
+    .footer-map {
+        height: 250px;
+    }
+    
+    .footer-contact {
+        border-left: none;
+        border-top: 1px solid rgba(6, 132, 120, 0.2);
+    }
 }
 
 /* Add a scroll-down indicator inspired by Gatefoot Forge */

@@ -1,4 +1,4 @@
-// Enhanced JavaScript functionality
+/// Enhanced JavaScript functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Scroll behavior for navigation
     const nav = document.querySelector('nav');
@@ -6,8 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const aboutSection = document.getElementById('about');
     const features = document.querySelectorAll('.feature');
     
+    // Setup the header slideshow
+    setupHeaderSlideshow();
+    
     // Mobile navigation setup
     const navLinks = document.querySelector('.nav-links');
+    
     
     // Add mobile navigation toggle if it doesn't exist
     if (!document.querySelector('.mobile-nav-toggle')) {
@@ -155,14 +159,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Add a subtle parallax effect to the header
-    const header = document.querySelector('header');
-    if (header) {
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            if (scrollPosition < window.innerHeight) {
-                header.style.backgroundPositionY = `calc(50% + ${scrollPosition * 0.5}px)`;
-            }
-        });
+    // Set up slideshow functionality for the header
+function setupHeaderSlideshow() {
+    const slides = document.querySelectorAll('.header-slideshow div');
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    
+    // Function to show next slide
+    function showNextSlide() {
+        // Hide current slide
+        slides[currentSlide].classList.remove('active');
+        
+        // Move to next slide (loop back to first if at the end)
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Show new slide
+        slides[currentSlide].classList.add('active');
     }
+    
+    // Change slide every 7 seconds
+    setInterval(showNextSlide, 4000);
+}
 });

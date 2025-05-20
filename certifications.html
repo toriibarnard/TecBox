@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications</title>
+    <title>Certifications | TecBox International LTD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/certifications.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <nav>
         <div class="navbar-container">
             <div class="logo">
-                <img src="images/logos/TecBox_2.jpg" alt="TecBox International LTD Logo">
+                <img src="images/logos/TecBox_2.png" alt="TecBox International LTD Logo">
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="awards.html">Awards</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="services.html"><i class="fas fa-boxes"></i> Services</a></li>
+                <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="awards.html"><i class="fas fa-trophy"></i> Awards</a></li>
             </ul>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -29,48 +33,47 @@
     </header>
 
     <section class="certifications-list">
-        <ul>
-            <li>
-                <img src="images/certifications/iso9001.jpg" alt="ISO9001 Certification" class="certification-photo">
-                <strong>ISO9001</strong>
-                <p>Our Quality Management System Certification ensures that we meet international standards for quality and consistency in our products and services.</p>
-            </li>
-            <li>
-                <img src="images/certifications/ispm15.jpg" alt="ISPM#15 Certification" class="certification-photo">
-                <strong>ISPM#15</strong>
-                <p>This certification ensures that our wood packaging materials are treated to prevent the spread of pests during international shipping.</p>
-            </li>
-            <li>
-                <img src="images/certifications/cfia-cwpca.jpg" alt="CFIA/CWPCA Certification" class="certification-photo">
-                <strong>CFIA/CWPCA</strong>
-                <p>Regular inspections under this program ensure compliance with heat treatment regulations for wood packaging.</p>
-            </li>
-            <li>
-                <img src="images/certifications/cwpcp.jpg" alt="CWPCP Certification" class="certification-photo">
-                <strong>CWPCP</strong>
-                <p>This program certifies that our wood packaging meets Canadian standards for safety and quality.</p>
-            </li>
-        </ul>
-    </section>
-
-    <section class="why-certifications">
-        <h2>Why Certifications Matter</h2>
-        <p>At TecBox International LTD, we believe that certifications are more than just badges—they are a commitment to quality, safety, and excellence. Our certifications ensure that we meet the highest standards in the industry, giving you peace of mind that your products are in safe hands.</p>
-        <img src="images/certifications/why-certifications.jpg" alt="Why Certifications Matter" class="scattered-photo">
-    </section>
-
-    <section class="cta">
-        <h2>Want to Learn More?</h2>
-        <p>If you have any questions about our certifications or how they benefit your business, feel free to reach out to us.</p>
-        <a href="contact.html" class="cta-button">Contact Us</a>
-        <img src="images/certifications/cta.jpg" alt="Contact Us" class="scattered-photo">
-    </section>
-
-    <section class="downloads">
-        <h2>Download Our Certification Brochure</h2>
-        <p>Learn more about our certifications and how they benefit your business.</p>
-        <a href="pdfs/certifications-brochure.pdf" download class="download-button">Download Brochure</a>
-        <img src="images/certifications/download.jpg" alt="Download Brochure" class="scattered-photo">
+        <div class="cert-container">
+            <div class="cert-card">
+                <div class="cert-content">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h2>ISO9001</h2>
+                    <p>Our Quality Management System Certification ensures that we meet international standards for quality and consistency in our products and services.</p>
+                </div>
+            </div>
+            
+            <div class="cert-card">
+                <div class="cert-content">
+                    <div class="cert-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h2>ISPM#15</h2>
+                    <p>This certification ensures that our wood packaging materials are treated to prevent the spread of pests during international shipping.</p>
+                </div>
+            </div>
+            
+            <div class="cert-card">
+                <div class="cert-content">
+                    <div class="cert-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h2>CFIA/CWPCA</h2>
+                    <p>Regular inspections under this program ensure compliance with heat treatment regulations for wood packaging.</p>
+                </div>
+            </div>
+            
+            <div class="cert-card">
+                <div class="cert-content">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h2>CWPCP</h2>
+                    <p>This program certifies that our wood packaging meets Canadian standards for safety and quality.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -79,9 +82,6 @@
                 <!-- Google Map Embed -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2851.6729688410487!2d-64.42044756858829!3d44.37830548798671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b575c555bd2624d%3A0xcb75f03aa70f2c4b!2s12681%20Nova%20Scotia%20Trunk%203%2C%20Lunenburg%2C%20NS%20B4V%205M9!5e0!3m2!1sen!2sca!4v1738963640775!5m2!1sen!2sca"
-                    width="100%"
-                    height="100%"
-                    style="border:0;"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
@@ -89,23 +89,22 @@
             </div>
             <div class="footer-contact">
                 <div class="footer-logo">
-                    <img src="images/logos/TecBox_2.jpg" alt="TecBox International LTD Logo">
+                    <img src="images/logos/TecBox_2.png" alt="TecBox International LTD Logo">
                 </div>
-                <h4>We make regular deliveries throughout Halifax and Lunenburg Counties.</h4>
-                <p><strong>Address:</strong> 12681 HWY 3, Rhodes Corner, Nova Scotia, Canada B4V 5N2</p>
-                <p><strong>Tel:</strong> +1 902 543-5044 | <strong>Fax:</strong> +1 902 543-2616</p>
-                <p><strong>Email:</strong> <a href="mailto:info@tecbox.ca">info@tecbox.ca</a></p>
+                <h4><i class="fas fa-truck"></i> We make regular deliveries throughout Halifax and Lunenburg Counties.</h4>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 12681 HWY 3, Rhodes Corner, Nova Scotia, Canada B4V 5N2</p>
+                <p><i class="fas fa-phone"></i> <strong>Tel:</strong> +1 902 543-5044 | <strong>Fax:</strong> +1 902 543-2616</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@tecbox.ca">info@tecbox.ca</a></p>
             </div>
         </div>
     </footer>
 
     <!-- Sticky Bubble Button -->
     <button id="contact-button" class="sticky-contact-button">
-        <i class="fas fa-envelope"></i>Contact Us
+        <i class="fas fa-envelope"></i> Contact Us
     </button>
 
     <!-- Link to your JavaScript file -->
     <script src="js/script.js"></script>
-
 </body>
 </html>

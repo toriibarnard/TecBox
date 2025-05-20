@@ -298,496 +298,42 @@ header h1::after {
     line-height: 1.8;
 }
 
+/* Updated Industry Cards with Icons */
 .industry-images {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .industry-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 200px;
-}
-
-.industry-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.industry-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.industry-card:hover img {
-    transform: scale(1.1);
-}
-
-.industry-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(6, 132, 120, 0.8);
-    color: #fff;
-    padding: 15px;
     text-align: center;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.industry-card:hover .industry-overlay {
-    transform: translateY(0);
-}
-
-/* Call to Action */
-.services-cta {
-    padding: 80px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, rgba(6, 132, 120, 0.9), rgba(4, 100, 90, 0.9)), url('../images/shop.jpg') no-repeat center center/cover;
-    color: #fff;
-    background-attachment: fixed;
-}
-
-.services-cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.services-cta p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 30px;
-    line-height: 1.8;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 32px;
-    font-size: 1.2rem;
-    color: rgb(6, 132, 120);
+    padding: 30px 20px;
     background: #fff;
-    text-decoration: none;
-    border-radius: 4px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    font-weight: 600;
-    border: 2px solid #fff;
-}
-
-.cta-button:hover {
-    background: transparent;
-    color: #fff;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.cta-button i {
-    margin-right: 8px;
-    transition: transform 0.3s ease;
-}
-
-.cta-button:hover i {
-    transform: translateX(4px);
-}
-
-/* Icon styling */
-.photo-gallery h2 i, 
-.industries-served h2 i {
-    margin-right: 10px;
-    color: rgb(6, 132, 120);
-}
-
-/* Fade-in animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.service-section,
-.photo-gallery,
-.industries-served,
-.services-cta {
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-.service-section:nth-child(3) { animation-delay: 0.1s; }
-.service-section:nth-child(4) { animation-delay: 0.2s; }
-.service-section:nth-child(5) { animation-delay: 0.3s; }
-.service-section:nth-child(6) { animation-delay: 0.4s; }
-.service-section:nth-child(7) { animation-delay: 0.5s; }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .service-section, 
-    .service-section.alternate {
-        flex-direction: column;
-        min-height: auto;
-    }
-    
-    .service-image {
-        height: 300px;
-    }
-    
-    .service-content {
-        padding: 40px 20px;
-    }
-    
-    /* Reset border styles on mobile for consistency */
-    .service-section:not(.alternate) .service-content,
-    .service-section.alternate .service-content {
-        border-left: none;
-        border-right: none;
-        border-top: 6px solid rgb(6, 132, 120);
-    }
-    
-    .service-section h2 {
-        font-size: 2rem;
-    }
-    
-    .photo-gallery h2,
-    .industries-served h2 {
-        font-size: 2.2rem;
-    }
-    
-    .industry-images {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    
-    .gallery-container {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-    
-    .services-cta h2 {
-        font-size: 2rem;
-    }
-    
-    .services-cta p {
-        font-size: 1.1rem;
-    }
-}/* Enhanced Services Page Styles with Full-Width Sections */
-
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
-
-/* Header Styles - Streamlined */
-header {
-    background-color: #fff;
-    color: #333;
-    padding: 80px 20px 50px;
-    text-align: center;
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid rgba(6, 132, 120, 0.1);
-}
-
-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0;
-    color: rgb(6, 132, 120);
-    position: relative;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-header h1::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: rgb(6, 132, 120);
-    margin: 15px auto 0;
-    border-radius: 2px;
-}
-
-/* Services Intro */
-.services-intro {
-    padding: 50px 20px;
-    text-align: center;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/shop.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.services-intro p {
-    font-size: 1.3rem;
-    color: #444;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-    font-weight: 500;
-}
-
-/* Full-Width Service Sections */
-.service-section {
-    display: flex;
-    min-height: 500px;
-    position: relative;
-    margin: 0;
-    background-color: #fff;
-}
-
-/* Alternating sections layout */
-.service-section.alternate {
-    flex-direction: row-reverse;
-}
-
-.service-image {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-}
-
-.service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.5s ease;
-}
-
-.service-content {
-    flex: 1;
-    padding: 60px;
+    height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    position: relative;
-    background-color: #fff;
+    border-top: 4px solid transparent;
 }
 
-/* Border accents for alternating layouts */
-.service-section:not(.alternate) .service-content {
-    border-left: 8px solid rgb(6, 132, 120);
-}
-
-.service-section.alternate .service-content {
-    border-right: 8px solid rgb(6, 132, 120);
-}
-
-.service-section h2 {
-    font-size: 2.5rem;
-    color: rgb(6, 132, 120);
-    margin-top: 0;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.service-section h2 i {
-    margin-right: 15px;
-}
-
-.service-content p {
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.service-content ul {
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.service-content ul li {
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.8;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 15px;
-}
-
-.service-content ul li::before {
-    content: '•';
-    color: rgb(6, 132, 120);
-    position: absolute;
-    left: -5px;
-    top: 0;
-    font-size: 1.2rem;
-}
-
-/* Hover effects */
-.service-image:hover img {
-    transform: scale(1.05);
-}
-
-/* Subtle color transition for sections */
-.service-section:nth-child(odd) {
-    background-color: #fff;
-}
-
-.service-section:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Photo Gallery */
-.photo-gallery {
-    padding: 80px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, rgba(6, 132, 120, 0.05), rgba(255, 255, 255, 0.8), rgba(6, 132, 120, 0.05));
-}
-
-.photo-gallery h2 {
-    font-size: 2.8rem;
-    color: rgb(6, 132, 120);
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.photo-gallery h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: rgb(6, 132, 120);
-    margin: 15px auto 0;
-    border-radius: 2px;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.gallery-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(6, 132, 120, 0.8);
-    color: #fff;
-    padding: 15px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover .gallery-caption {
-    transform: translateY(0);
-}
-
-/* Enhanced gallery hover effect */
-.gallery-item::after {
+.industry-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(6, 132, 120, 0.2);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 15px;
-}
-
-.gallery-item:hover::after {
-    opacity: 1;
-}
-
-/* Animation for gallery item click */
-.gallery-item.clicked {
-    animation: pulse 0.3s ease-in-out;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-/* Industries Served */
-.industries-served {
-    padding: 80px 20px;
-    background: #fff;
-    text-align: center;
-    position: relative;
-}
-
-.industries-served h2 {
-    font-size: 2.8rem;
-    color: rgb(6, 132, 120);
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.industries-served h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
+    width: 0%;
+    height: 4px;
     background: rgb(6, 132, 120);
-    margin: 15px auto 0;
-    border-radius: 2px;
-}
-
-.industries-served p {
-    font-size: 1.2rem;
-    color: #444;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    line-height: 1.8;
-}
-
-.industry-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.industry-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 200px;
+    transition: width 0.3s ease;
+    z-index: 1;
 }
 
 .industry-card:hover {
@@ -795,32 +341,54 @@ header h1::after {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.industry-card img {
+.industry-card:hover::before {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.industry-card:hover img {
+.industry-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(6, 132, 120, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.industry-card:hover .industry-icon {
+    background: rgba(6, 132, 120, 0.2);
     transform: scale(1.1);
 }
 
-.industry-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(6, 132, 120, 0.8);
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    transform: translateY(100%);
+.industry-card i {
+    font-size: 3rem;
+    color: rgb(6, 132, 120);
     transition: transform 0.3s ease;
 }
 
-.industry-card:hover .industry-overlay {
-    transform: translateY(0);
+.industry-card:hover i {
+    transform: translateY(-5px);
+}
+
+.industry-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 10px 0;
+    transition: color 0.3s ease;
+}
+
+.industry-card:hover h3 {
+    color: rgb(6, 132, 120);
+}
+
+.industry-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Call to Action */

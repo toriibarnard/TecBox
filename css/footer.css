@@ -116,6 +116,34 @@ footer::before {
     display: inline-block;
 }
 
+.address-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 12px 0;
+}
+
+.address-container i {
+    color: rgb(6, 132, 120);
+    margin-right: 10px;
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.address-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-content strong {
+    margin-bottom: 4px;
+}
+
+.address-content span {
+    color: #444;
+}
+
 .footer-contact a:hover {
     color: rgb(4, 100, 90);
     transform: translateX(3px);

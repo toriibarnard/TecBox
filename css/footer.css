@@ -10,8 +10,10 @@ body {
 footer {
     margin-top: 60px;
     padding: 0;
-    background: url('../images/Shop.jpg') no-repeat center center/cover;
     position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 footer::before {
@@ -153,6 +155,8 @@ footer::before {
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
+        width: 100%;
+        padding: 0;
     }
     
     .footer-map, .footer-contact {
@@ -160,14 +164,23 @@ footer::before {
         margin: 20px;
         border-radius: 20px;
         height: auto;
-    }
-    
-    .footer-map {
-        height: 250px;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     .footer-contact {
         border-left: none;
         border-top: 1px solid rgba(6, 132, 120, 0.2);
+        padding: 20px;
+    }
+    
+    /* Fix for address overflow */
+    .address-content span {
+        word-break: break-word;
+        font-size: 0.95rem;
+    }
+    
+    .footer-contact p {
+        font-size: 0.95rem;
     }
 }

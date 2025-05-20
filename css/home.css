@@ -138,8 +138,8 @@ header::after {
 .about-content {
     display: flex;
     align-items: stretch;
-    gap: 60px; /* More gap between elements */
-    margin-bottom: 80px; /* More space at bottom */
+    gap: 50px; /* Variable 1: Gap between text and image (adjust as needed) */
+    margin-bottom: 80px;
     animation: fadeInUp 1s ease-in-out;
     max-width: 1200px;
     margin-left: auto;
@@ -147,20 +147,30 @@ header::after {
 }
 
 .about-text {
-    flex: 1;
+    flex: 0.85; /* Variable 2: This controls the relative width */
     text-align: left;
-    padding: 40px; /* More padding */
+    padding: 40px;
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); /* Softer, deeper shadow */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    max-height: 400px; /* Set back to fixed height */
-    overflow-y: auto; /* Enable scrolling */
-    border-left: 4px solid rgb(6, 132, 120); /* Add left border accent */
+    max-height: 315px; /* Variable 3: Height of the text box (should match image height) */
+    overflow-y: auto;
+    border-left: 4px solid rgb(6, 132, 120);
     backdrop-filter: blur(5px);
+}
+
+.about-image {
+    flex: 1; /* Variable 4: This should match Variable 2 for equal widths */
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 482px; /* Variable 5: This should match Variable 3 */
 }
 
 /* Custom scrollbar styling */
@@ -214,7 +224,7 @@ header::after {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Deeper shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    height: 482px; /* Match the height of the text container */
+    height: 400px; /* Match the height of the text container */
 }
 
 .about-image img {
@@ -534,6 +544,10 @@ footer::before {
     .about-content {
         flex-direction: column;
         gap: 30px;
+    }
+
+    .about-text, .about-image {
+        /* No width overrides here, let flex handle it */
     }
 
     .about-text {

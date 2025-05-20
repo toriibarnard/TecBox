@@ -1,15 +1,112 @@
-h1 {
+/* Awards Page Styles */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 80px 20px 40px;
     text-align: center;
-    color: #004080;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(6, 132, 120, 0.1);
 }
 
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: rgb(6, 132, 120);
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Awards Content Section */
 section {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-h2 {
-    color: #ff9900;
-    margin-top: 20px;
+section h2 {
+    color: rgb(6, 132, 120);
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 4px solid rgb(6, 132, 120);
+}
+
+section h2:first-child {
+    margin-top: 0;
+}
+
+section p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    padding-left: 24px;
+}
+
+/* Award Item Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section h2, 
+section p {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+section h2:nth-of-type(2), 
+section p:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    header p {
+        font-size: 1.1rem;
+    }
+    
+    section {
+        padding: 30px 15px;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    section p {
+        font-size: 1rem;
+    }
 }

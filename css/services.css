@@ -98,6 +98,11 @@ header h1::after {
     margin-bottom: 30px;
 }
 
+/* Style for alternating layouts */
+.service-content.right-image {
+    flex-direction: row-reverse;
+}
+
 .service-text {
     flex: 1;
     background: rgba(255, 255, 255, 0.9);
@@ -105,6 +110,13 @@ header h1::after {
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     border-left: 4px solid rgb(6, 132, 120);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Adjust border for right-image layout */
+.right-image .service-text {
+    border-left: none;
+    border-right: 4px solid rgb(6, 132, 120);
 }
 
 .service-text p, .service-text ul {
@@ -438,14 +450,20 @@ header h1::after {
         font-size: 2.5rem;
     }
     
-    .service-content {
+    .service-content, .service-content.right-image {
         flex-direction: column;
         gap: 30px;
     }
 
     .service-image {
-        order: -1; /* Move image above text on mobile */
+        order: -1; /* Move image above text on mobile for all layouts */
         height: 250px;
+    }
+    
+    /* Ensure consistent border styling on mobile */
+    .service-text, .right-image .service-text {
+        border-left: 4px solid rgb(6, 132, 120);
+        border-right: none;
     }
 
     .industry-images {
